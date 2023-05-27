@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topnav {
+             background-color: #fa4b4b;
+             overflow: hidden;
+             font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 align="center"> GUC BANK</h1>
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <label ID="n">username: </label>
+    <textarea ID="name" runat="server"></textarea> <br/>
+    <label ID="p">password: </label>
+    <textarea ID="password" runat="server"></textarea> <br/>
+    <label ID="id">National ID: </label>
+    <textarea ID="NID" runat="server"></textarea> <br/>
+    <label ID="pn">phone number: </label>
+    <textarea ID="pnumber" runat="server"></textarea> <br/>
+    <label ID="c">credit card number: </label>
+    <textarea ID="card" runat="server"></textarea> <br/>
+    <button ID="reg">register</button><br>
+</body>
+<script>
+    const hbtn = document.getElementById("reg");
+    const n = document.getElementById("n");
+    const p = document.getElementById("p");
+    const id = document.getElementById("id");
+    const pn = document.getElementById("pn");
+    const c = document.getElementById("c");
+    hbtn.addEventListener("click",function(e){
+    window.location.replace("ClientHome.html");
+    })
+</script>
+</html>

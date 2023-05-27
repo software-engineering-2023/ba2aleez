@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+h1 {
+  color: #2E8752;
+  font-family: Abril Fatface;
+  font-size: 100px;
+  line-height: 50px;
+  width: 1124px;
+  text-align: center;
+  position: center;
+  margin-left: 176px;
+  margin-right: 176px;
+}
+.p {
+  color: black;
+  font-family: Abril Fatface;
+  font-size: 50px;
+  line-height: 50px;
+  width: 1124px;
+  text-align: center;
+  position: center;
+  margin-left: 176px;
+  margin-right: 176px;
+}
+.jpg {
+  width: 150px;
+  height: 150px;
+}
+.selector {
+  background-color: #2E8752;
+  border-radius: 5px;
+  width: 1500px;
+  height: 253px;
+}
+    </style>
+	
+</head>
+<body>
+
+
+
+<form >
+<button class="selector" id="login-button">
+<span class="p">Go To Login Page</span>
+
+<Button id="btn" runat="server" Text="hide the thing" OnClick="toggleVisibility"></Button>
+</form>
+
+<h class="h1" id="myTextBox"> Logged In</h>
+
+<script > 
+const hbtn = document.getElementById("btn");
+const txt = document.getElementById("myTextBox");
+hbtn.addEventListener("click",function(e){
+  if (txt.style.display === "none") {
+    txt.style.display = "block";
+  } else {
+    txt.style.display = "none";
+  }
+})
+</script>
+</body>
+</html> 
