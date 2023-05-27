@@ -5,16 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .conatiner {
+            position: fixed;
+            margin-left: 256px;
+            margin-bottom: 188px;
+            width: 400px;
+            height: 600px;
+        }
+        #pbtn {
+            left: 256px;
+            bottom: 188px;
+        }
+    </style>
 </head>
 <body>
-    <button ID="pbtn">points</button>
-    <button ID="cbtn">credit card</button>
-    <button ID="rbtn">report issue</button>
-    <button ID="trbtn">transactions</button>
-    <button ID="lbtn">loans</button>
-    <button ID="pybtn">payment</button>
-    <button ID="rmbtn">reminders</button>
-    <button ID="tfbtn">transfers</button>
+    <div class="container">
+    <div><button ID="pbtn">points</button></div>
+    <div><button ID="cbtn">credit card</button></div>
+    <div><button ID="rbtn">report issue</button></div>
+    <div><button ID="trbtn">transactions</button></div>
+    <div><button ID="lbtn">loans</button></div>
+    <div><button ID="pybtn">payment</button></div>
+    <div><button ID="rmbtn">reminders</button></div>
+    <div><button ID="tfbtn">transfers</button></div>
+
+    </div>
+    
 </body>
 <script>
     const point = document.getElementById("pbtn");
