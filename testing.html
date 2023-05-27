@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+          Username:  <br/>
+    <textarea ID="Textbox1" runat="server"></textarea> <br/>
+    Password: <br/>
+    <TextBox ID="Textbox2" runat="server"></TextBox> <br/>
+            <Button id="btn" runat="server" Text="Login" OnClick="toggleVisibility"></Button>
+        </div>
+        <button>login</button>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label>
+<input type="datetime-local" >
+<GridView ID="GridView1" runat="server"></GridView> <br/>
+<textarea ID="myTextBox" runat="server"></textarea> <br/>
+<table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table><div class="watchlist">
+    <form method="POST" action='/conjuring'>
+        <button id="watchlist" class="btn btn-secondary ml-3">Add to Watchlist</button>
+    </form>
+</div>
+
+    </form>
+    <script> src= "test.js" </script>
+</body>
+
+</html>
