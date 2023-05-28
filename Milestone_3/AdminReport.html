@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topnav {
+             background-color: #043c3c;
+             overflow: hidden;
+             font-family: 'Times New Roman', Times,  serif;
+             color: white;
+             font-size: xx-large;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        table{
+            position: sticky;
+            align-self: center;
+            left:0;
+            top:20px;
+            color: black;
+            width: 500px;
+            border-color: black;
+            border: 1px solid;
+        }
+        table,th,td{
+          border:1px solid black;
+        }
+        #home {
+            margin-left: auto; 
+            margin-right: 0;
+            float: right;
+        }
+        #card,#ap,#apply {
+            position: static;
+            visibility: hidden;
+            display: none;
+        }
+        #home,#Rbtn,#apply{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
+        #noti {
+            position: absolute;
+            top: 588px;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 align="center"> GUC BANK</h1>
+      </div>
+      <table>
+        <tr>
+          <th>Report issued No.</th>  
+          <th>report description</th>
+          <th>report type</th>
+          <th>date</th>
+        </tr>
+        <tr>
+          <td>4302</td>
+          <td>The Client has a problem when they try to login</td>
+          <td>29/12/2023</td>
+        </tr>
+        <tr>
+          <td>14588</td>
+          <td>App is lagging when the client tries to transfer money</td>
+          <td>12/7/2023</td>
+        </tr>
+      </table>
+      <!-- <input type="radio" id="theft" name="type" value="theft">
+    <label for="theft">send it to the banker page</label><br>
+    <input type="radio" id="technical" name="type" value="technical">
+    <label for="technical">send to the IT staff</label><br> -->
+    <!-- <textarea ID="card" runat="server">please enter the credit card number</textarea><br/> -->
+    <textarea ID="desc" runat="server"></textarea> write the reported issue number <br/>
+    <button ID="Rbtn">Submit</button>
+    <button ID="home">Home</button><br>
+    <label ID="response"></label>
+    <table id="noti">
+      <tr>
+          </tr>
+    </table>
+</body>
+<script>
+    const hbtn = document.getElementById("home");
+    const Rbtn = document.getElementById("Rbtn");
+    const desc = document.getElementById("desc");
+    const resp = document.getElementById("response");
+    const card = document.getElementById("card");
+    const theft = document.getElementById("theft");
+    const tech = document.getElementById("technical");
+    const lbap = document.getElementById("ap");
+    const applyb = document.getElementById("apply");
+    hbtn.addEventListener("click",function(e){
+    window.location.replace("AdminLogin.html");
+    })
+    Rbtn.addEventListener("click",function(e){
+    if(desc.value == ''){
+        resp.textContent="please enter the Number of the issue";
+    }
+    else {
+        resp.textContent="Report Handled Successfully";
+        lbap.style.visibility= "visible";
+        lbap.style.display= "inline";
+        applyb.style.visibility= "visible";
+        applyb.style.display= "inline";
+    }
+    })
+    theft.addEventListener("click",function(e){
+    card.style.visibility= "visible";
+    card.style.display= "inline";
+    })
+    tech.addEventListener("click",function(e){
+    card.style.visibility= "hidden";
+    card.style.display= "none";
+    lbap.style.visibility= "hidden";
+    lbap.style.display= "none";
+    applyb.style.visibility= "hidden";
+    applyb.style.display= "none";
+    })
+   /*  applyb.addEventListener("click",function(e){
+      resp.textContent="application has been sent";
+    }) */
+</script>
+</html>
