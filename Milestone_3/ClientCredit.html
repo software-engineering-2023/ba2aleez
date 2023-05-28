@@ -9,29 +9,44 @@
         body{
             background-color: aliceblue;
         }
+        #home,#Abtn{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
         #home {
             margin-left: auto; 
             margin-right: 0;
             float: right;
         }
         .topnav {
-             background-color: #fa4b4b;
+             background-color: #043c3c;
              overflow: hidden;
-             font-family: 'Times New Roman', Times, serif;
+             font-family: 'Times New Roman', Times,  serif;
+             color: white;
+             font-size: xx-large;
         }
         #reponse {
             margin-bottom: 10;
             margin-left: 0;
+        }
+        table,th,td{
+          border:1px solid black;
+
+        }
+        #cards{
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
         }
     </style>
 </head>
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
       </div>
       <table>
         <tr>
@@ -50,12 +65,13 @@
           <td>1/5/2023</td>
         </tr>
       </table> 
+      <input type="datetime-local" > filter transactions by date <br>
       <select name="cards" id="cards" >
         <option value="card 1">card 1</option>
         <option value="card 2">card 2</option>
         <option value="card 3">card 3</option>
         <option value="whatever"> change those to actual card numbers or options idk</option>
-    </select>
+    </select> <br>
     <button ID="Abtn">apply for a credit card</button><br>
     <button ID="home">Home</button><br>
     <label ID="response"></label>

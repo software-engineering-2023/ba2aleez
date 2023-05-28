@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: aliceblue;
+        }
         .conatiner {
             position: fixed;
             margin-left: 256px;
@@ -14,23 +17,92 @@
             height: 600px;
         }
         #pbtn {
-            left: 256px;
+            position: absolute;
+            left: 266px;
             bottom: 188px;
+            width: 200px;
+            height: 100px;
+        }
+        #cbtn {
+            position: absolute;
+            left: 530px;
+            bottom: 188px;
+            width: 200px;
+            height: 100px;
+        }
+        #rbtn {
+            position: absolute;
+            left: 790px;
+            bottom: 188px;
+            width: 200px;
+            height: 100px;
+        }
+        #trbtn {
+            position: absolute;
+            left: 1046px;
+            bottom: 188px;
+            width: 200px;
+            height: 100px;
+        }
+        #lbtn {
+            position: absolute;
+            left: 266px;
+            bottom: 376px;
+            width: 200px;
+            height: 100px;
+        }
+        #pybtn {
+            position: absolute;
+            left: 530px;
+            bottom: 376px;
+            width: 200px;
+            height: 100px;
+        }
+        #rmbtn {
+            position: absolute;
+            left: 790px;
+            bottom: 376px;
+            width: 200px;
+            height: 100px;
+        }
+        #tfbtn {
+            position: absolute;
+            left: 1046px;
+            bottom: 376px;
+            width: 200px;
+            height: 100px;
+        }
+        .topnav {
+             background-color: #043c3c;
+             overflow: hidden;
+             font-family: 'Times New Roman', Times,  serif;
+             color: white;
+             font-size: xx-large;
+        }
+        .container button {
+             background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
         }
     </style>
 </head>
 <body>
+    <div class="topnav" align=""center>
+        <h1 align="center"> GUC BANK</h1>
+      </div>
     <div class="container">
-    <div><button ID="pbtn">points</button></div>
-    <div><button ID="cbtn">credit card</button></div>
-    <div><button ID="rbtn">report issue</button></div>
-    <div><button ID="trbtn">transactions</button></div>
-    <div><button ID="lbtn">loans</button></div>
-    <div><button ID="pybtn">payment</button></div>
-    <div><button ID="rmbtn">reminders</button></div>
-    <div><button ID="tfbtn">transfers</button></div>
-
-    </div>
+    <div><button ID="pbtn">points</button>
+    <button ID="cbtn">credit card</button>
+    <button ID="rbtn">report issue</button>
+    <button ID="trbtn">transactions</button></div>
+    <div><button ID="lbtn">loans</button>
+    <button ID="pybtn">payment</button>
+    <button ID="rmbtn">reminders</button>
+    <button ID="tfbtn">transfers</button></div>
+     </div>
     
 </body>
 <script>
