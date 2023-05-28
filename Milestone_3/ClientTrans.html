@@ -41,13 +41,32 @@
         table,th,td{
           border:1px solid black;
         }
+        #noti {
+            position: absolute;
+            top: 588px;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+        #ap,#cl{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
     </style>
 </head>
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
       </div>
-      <table>
+      <table id="trans">
         <tr>
           <th>amount</th>
           <th>type</th>
@@ -67,7 +86,8 @@
     <select name="accounts" id="accounts" >
         <option value="acc 1">acc 1</option>
         <option value="acc 2">acc 2</option>
-    </select> <br>
+    </select> 
+    <label ID="balance"> balance = 50,000</label><br>
     <select name="operator" id="operator" >
         <option value="big">greater than</option>
         <option value="small">smaller than</option>
@@ -76,13 +96,58 @@
     <textarea ID="amount" runat="server"></textarea><br>
     <input type="datetime-local" > <br>
     <button ID="home">Home</button><br>
+    <button ID="ap">apply for a new account</button>
+    <button ID="cl">close the currently selected account</button><br>
     <label ID="response"></label>
+    <table id="noti">
+      <tr>
+        <th>notifications</th>
+      </tr>
+      <tr>
+        <td>upcoming utilities payment in 29 may</td>
+      </tr>
+      <tr>
+        <td>new certificates of deposit with a 19% return</td>
+      </tr>
+      <tr>
+          <td>new car loans with low return, up to 3 years</td>
+        </tr>
+        <tr>
+          <td>the technical issue regarding the incorrect points balance is resolved</td>
+          </tr>
+    </table>
 </body>
 <script>
     const hbtn = document.getElementById("home");
     const amount = document.getElementById("amount");
+    const resp = document.getElementById("response");
+    const cl = document.getElementById("cl");
+    const apply = document.getElementById("ap");
+    const acc = document.getElementById("accounts");
+    const tr = document.getElementById("trans");
+    const bal = document.getElementById("balance");
     hbtn.addEventListener("click",function(e){
     window.location.replace("ClientHome.html");
+    })
+    cl.addEventListener("click",function(e){
+      resp.textContent="request to close account number " + acc.value + " has been sent";
+    })
+    apply.addEventListener("click",function(e){
+      resp.textContent="request to open a new account has been sent";
+    })
+    acc.addEventListener("click",function(e){
+      if(acc.value == "acc 2"){
+        tr.rows[2].cells[0].innerHTML = '3,000';
+        tr.rows[2].cells[1].innerHTML = 'utility payment';
+        tr.rows[2].cells[2].innerHTML = '3/3/2023';
+        bal.textContent="balance = 36,000"
+      }
+      else {
+        tr.rows[2].cells[0].innerHTML = '10,000';
+        tr.rows[2].cells[1].innerHTML = 'domestic transfer';
+        tr.rows[2].cells[2].innerHTML = '1/5/2023';
+        bal.textContent="balance = 50,000"
+      }
     })
 </script>
 </html>

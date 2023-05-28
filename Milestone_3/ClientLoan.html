@@ -38,6 +38,18 @@
           border:1px solid black;
 
         }
+        #noti {
+            position: absolute;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+        th,td{
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +87,23 @@
     <button ID="Abtn">Apply for a loan</button>
     <button ID="home">Home</button><br>
     <label ID="response"></label>
+    <table id="noti">
+      <tr>
+        <th>notifications</th>
+      </tr>
+      <tr>
+        <td>upcoming utilities payment in 29 may</td>
+      </tr>
+      <tr>
+        <td>new certificates of deposit with a 19% return</td>
+      </tr>
+      <tr>
+          <td>new car loans with low return, up to 3 years</td>
+        </tr>
+        <tr>
+          <td>the technical issue regarding the incorrect points balance is resolved</td>
+          </tr>
+    </table>
 </body>
 <script>
     const hbtn = document.getElementById("home");

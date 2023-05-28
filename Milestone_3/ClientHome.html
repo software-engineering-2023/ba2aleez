@@ -87,6 +87,18 @@
             cursor: pointer; /* Pointer/hand icon */
             font-size: larger;
         }
+        #noti {
+            position: absolute;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+        th,td{
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -97,13 +109,29 @@
     <div><button ID="pbtn">points</button>
     <button ID="cbtn">credit card</button>
     <button ID="rbtn">report issue</button>
-    <button ID="trbtn">transactions</button></div>
+    <button ID="trbtn">accounts</button></div>
     <div><button ID="lbtn">loans</button>
     <button ID="pybtn">payment</button>
     <button ID="rmbtn">reminders</button>
     <button ID="tfbtn">transfers</button></div>
      </div>
-    
+     <table id="noti">
+        <tr>
+          <th>notifications</th>
+        </tr>
+        <tr>
+          <td>upcoming utilities payment in 29 may</td>
+        </tr>
+        <tr>
+          <td>new certificates of deposit with a 19% return</td>
+        </tr>
+        <tr>
+            <td>new car loans with low return, up to 3 years</td>
+          </tr>
+          <tr>
+            <td>the technical issue regarding the incorrect points balance is resolved</td>
+            </tr>
+      </table>
 </body>
 <script>
     const point = document.getElementById("pbtn");

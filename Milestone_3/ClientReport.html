@@ -34,12 +34,12 @@
             margin-right: 0;
             float: right;
         }
-        #card {
+        #card,#ap,#apply {
             position: static;
             visibility: hidden;
             display: none;
         }
-        #home,#Rbtn{
+        #home,#Rbtn,#apply{
           background-color: #79b088; 
             border: 1px solid black; 
             color: white; /* White text */
@@ -47,6 +47,16 @@
             cursor: pointer; /* Pointer/hand icon */
             font-size: larger;
             font-family: 'Times New Roman', Times,  serif;
+        }
+        #noti {
+            position: absolute;
+            top: 588px;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
         }
     </style>
 </head>
@@ -79,7 +89,26 @@
     <textarea ID="desc" runat="server"></textarea> write a description of the report <br/>
     <button ID="Rbtn">report</button>
     <button ID="home">Home</button><br>
+    <label ID="ap">would you like to apply for a replacement?</label>
+    <button ID="apply">apply</button><br>
     <label ID="response"></label>
+    <table id="noti">
+      <tr>
+        <th>notifications</th>
+      </tr>
+      <tr>
+        <td>upcoming utilities payment in 29 may</td>
+      </tr>
+      <tr>
+        <td>new certificates of deposit with a 19% return</td>
+      </tr>
+      <tr>
+          <td>new car loans with low return, up to 3 years</td>
+        </tr>
+        <tr>
+          <td>the technical issue regarding the incorrect points balance is resolved</td>
+          </tr>
+    </table>
 </body>
 <script>
     const hbtn = document.getElementById("home");
@@ -89,6 +118,8 @@
     const card = document.getElementById("card");
     const theft = document.getElementById("theft");
     const tech = document.getElementById("technical");
+    const lbap = document.getElementById("ap");
+    const applyb = document.getElementById("apply");
     hbtn.addEventListener("click",function(e){
     window.location.replace("ClientHome.html");
     })
@@ -98,6 +129,10 @@
     }
     else {
         resp.textContent="report submitted for review";
+        lbap.style.visibility= "visible";
+        lbap.style.display= "inline";
+        applyb.style.visibility= "visible";
+        applyb.style.display= "inline";
     }
     })
     theft.addEventListener("click",function(e){
@@ -107,6 +142,13 @@
     tech.addEventListener("click",function(e){
     card.style.visibility= "hidden";
     card.style.display= "none";
+    lbap.style.visibility= "hidden";
+    lbap.style.display= "none";
+    applyb.style.visibility= "hidden";
+    applyb.style.display= "none";
+    })
+    applyb.addEventListener("click",function(e){
+      resp.textContent="application has been sent";
     })
 </script>
 </html>
