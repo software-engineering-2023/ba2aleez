@@ -45,8 +45,7 @@
     <textarea ID="name" runat="server"></textarea> <br/>
     <label ID="password">password:</label><br>
     <textarea ID="pass" runat="server"></textarea> <br/>
-    <button ID="login">login</button><br>
-    <button ID="reg">First time registration</button><br>
+    <button ID = "login">login</button><br>
     <label ID="response"></label>
 </body>
 <script>
@@ -60,11 +59,9 @@
         resp.textContent="please enter a valid name and password";
     }
     else {
-        window.location.replace("ClientHome.html");
+        window.location.replace("BankerHome.html");
     }
     })
-    reg.addEventListener("click",function(e){
-        window.location.replace("ClientReg.html");
-    })
+    
 </script>
 </html>
