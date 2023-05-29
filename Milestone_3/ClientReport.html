@@ -25,13 +25,18 @@
             width: 500px;
             border-color: black;
             border: 1px solid;
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
         }
         table,th,td{
           border:1px solid black;
         }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         #card,#ap,#apply {
@@ -58,6 +63,23 @@
             font-size: x-large;
             width: 700px;
         }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
+        }
+        #theft,#technical,#card,#desc,#Rbtn,#ap,#apply,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
@@ -80,17 +102,17 @@
           <td>technical issue</td>
           <td>12/7/2023</td>
         </tr>
-      </table>
+      </table> <br> <br> <br> <br> <br> <br> <br>
       <input type="radio" id="theft" name="type" value="theft">
     <label for="theft">credit card theft</label><br>
     <input type="radio" id="technical" name="type" value="technical">
     <label for="technical">technical issue</label><br>
-    <textarea ID="card" runat="server">please enter the credit card number</textarea><br/>
-    <textarea ID="desc" runat="server"></textarea> write a description of the report <br/>
+    <textarea ID="card" runat="server">please enter the credit card number</textarea><br/> <br> <br>
+    <textarea ID="desc" runat="server"></textarea> write a description of the report <br/> <br> <br> <br>
     <button ID="Rbtn">report</button>
     <button ID="home">Home</button><br>
     <label ID="ap">would you like to apply for a replacement?</label>
-    <button ID="apply">apply</button><br>
+    <button ID="apply">apply</button><br> <br>
     <label ID="response"></label>
     <table id="noti">
       <tr>
@@ -109,6 +131,8 @@
           <td>the technical issue regarding the incorrect points balance is resolved</td>
           </tr>
     </table>
+    <img src="guc logo.png" id="logo">
+    
 </body>
 <script>
     const hbtn = document.getElementById("home");
@@ -149,6 +173,9 @@
     })
     applyb.addEventListener("click",function(e){
       resp.textContent="application has been sent";
+    })
+    card.addEventListener("click",function(e){
+        card.textContent="";
     })
 </script>
 </html>

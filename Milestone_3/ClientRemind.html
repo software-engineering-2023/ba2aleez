@@ -34,6 +34,11 @@
             width: 500px;
             border-color: black;
             border: 1px solid;
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
         }
         th{
             border: 1px solid;
@@ -43,7 +48,7 @@
         }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         #noti {
@@ -55,6 +60,23 @@
             border: 1px solid black;
             font-size: x-large;
             width: 700px;
+        }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
+        }
+        #date,#optional,#Rbtn,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
         }
     </style>
 </head>
@@ -75,11 +97,11 @@
           <td>loan installment reminder</td>
           <td>29/8/2023</td>
         </tr>
-      </table>
-    <input type="datetime-local" id="date"> <br>
-    <textarea ID="optional" runat="server">write reminder description *optional*</textarea> <br/>
+      </table> <br> <br> <br> <br> <br>
+    <input type="datetime-local" id="date"> <br> <br> 
+    <textarea ID="optional" runat="server">write reminder description *optional*</textarea> <br/> <br> <br>
     <button ID="Rbtn">set reminder</button>
-    <button ID="home">Home</button><br>
+    <button ID="home">Home</button><br> <br> <br>
     <label ID="response"></label>
     <table id="noti">
         <tr>
@@ -98,6 +120,7 @@
             <td>the technical issue regarding the incorrect points balance is resolved</td>
             </tr>
       </table>
+      <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("home");

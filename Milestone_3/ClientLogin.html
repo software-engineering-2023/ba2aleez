@@ -31,6 +31,23 @@
             font-size: larger;
             font-family: 'Times New Roman', Times,  serif;
         }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 700px;
+            top: 210px;
+            opacity: 0.85;
+        }
+        #n,#password,#name,#pass,#reg,#login,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
@@ -41,13 +58,14 @@
         Quick, Convenient and secure. Internet banking lets you access your accounts whenever you want-so 
         its easy to manage your money, wherever you are in the world
     </h2>
-    <label ID="n">username:</label><br>
-    <textarea ID="name" runat="server"></textarea> <br/>
-    <label ID="password">password:</label><br>
-    <textarea ID="pass" runat="server"></textarea> <br/>
-    <button ID="login">login</button><br>
-    <button ID="reg">First time registration</button><br>
+    <label ID="n">username: </label><br> <br> <br> <br> <br> <br> <br>
+    <textarea ID="name" runat="server"></textarea> <br/> <br> <br>  <br>
+    <label ID="password">password: </label><br> <br> <br>
+    <textarea ID="pass" runat="server"></textarea> <br/> <br> <br>
+    <button ID="login">login</button><br> <br> <br>
+    <button ID="reg">First time registration</button><br> <br> <br>
     <label ID="response"></label>
+    <img src="guc logo.png" id="logo">
 </body>
 <script>
     const log = document.getElementById("login");

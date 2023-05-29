@@ -20,7 +20,7 @@
         }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         .topnav {
@@ -36,7 +36,13 @@
         }
         table,th,td{
           border:1px solid black;
-
+        }
+        table{
+          margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
         }
         #cards{
             font-size: larger;
@@ -51,8 +57,22 @@
             font-size: x-large;
             width: 700px;
         }
-        th,td{
-            border: 1px solid black;
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
+        }
+        #date,#credit,#accounts,#cards,#Abtn,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
         }
     </style>
 </head>
@@ -76,16 +96,16 @@
           <td>utility payment</td>
           <td>1/5/2023</td>
         </tr>
-      </table> 
-      <input type="datetime-local" > filter transactions by date <br>
+      </table> <br> <br> <br> <br> <br>
+      <input type="datetime-local" id="date"> filter transactions by date <br> <br>
       <select name="cards" id="cards" >
         <option value="card 1">card 1</option>
         <option value="card 2">card 2</option>
         <option value="card 3">card 3</option>
         <option value="whatever"> change those to actual card numbers or options idk</option>
-    </select> <br>
+    </select> <br> <br>
     <button ID="Abtn">apply for a credit card</button><br>
-    <button ID="home">Home</button><br>
+    <button ID="home">Home</button><br> <br>
     <label ID="response"></label>
     <table id="noti">
       <tr>
@@ -104,6 +124,7 @@
         <td>the technical issue regarding the incorrect points balance is resolved</td>
         </tr>
     </table>
+    <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("home");

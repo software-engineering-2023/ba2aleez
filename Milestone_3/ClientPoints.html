@@ -18,7 +18,7 @@
         }
         #home,#dummy1,#dummy2,#dummy3 {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         #home,#Rbtn{
@@ -39,6 +39,11 @@
             width: 500px;
             border-color: black;
             border: 1px solid;
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
         }
         table,th,td{
           border:1px solid black;
@@ -58,6 +63,16 @@
             border: 1px solid black;
             font-size: x-large;
             width: 700px;
+        }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
         }
     </style>
 </head>
@@ -81,8 +96,8 @@
           <td>up to 10,000 pounds in purchases</td>
           <td>12/7/2023</td>
         </tr>
-      </table>
-      <label ID="dummy1" > 2,000 points from credit card transactions</label>
+      </table> 
+      <label ID="dummy1" > 2,000 points from credit card transactions</label> <br> <br> <br> <br> <br>
       <label ID="rate"> 100 points can be redeemed for 105 pounds</label> <br>
       <label ID="dummy2" > 3,000 points from transfers</label><br>
       <label ID="dummy3" > balance: 5,000 points</label>
@@ -107,6 +122,7 @@
           <td>the technical issue regarding the incorrect points balance is resolved</td>
           </tr>
     </table>
+    <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("home");
