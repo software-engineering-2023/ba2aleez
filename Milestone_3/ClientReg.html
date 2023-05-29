@@ -45,12 +45,12 @@
             font-size: large;
         }
         #response {
-          margin-left: 30px;
+          margin-left: 150px;
           margin-right: auto;
           float: left;
           font-family: 'Times New Roman', Times, serif;
           font-size: large;
-          bottom: 120px;
+          bottom: 300px;
           position: absolute;
         }
         button#reg:hover{
@@ -73,17 +73,24 @@
     <label ID="c">credit card number: </label> <br> <br>
     <textarea ID="card" runat="server"></textarea> <br/> <br> <br>
     <button ID="reg">register</button><br>
+    <label ID="response"></label>
     <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("reg");
-    const n = document.getElementById("n");
-    const p = document.getElementById("p");
-    const id = document.getElementById("id");
-    const pn = document.getElementById("pn");
-    const c = document.getElementById("c");
+    const n = document.getElementById("name");
+    const p = document.getElementById("password");
+    const id = document.getElementById("NID");
+    const pn = document.getElementById("pnumber");
+    const c = document.getElementById("card");
+    const resp = document.getElementById("response");
     hbtn.addEventListener("click",function(e){
-    window.location.replace("ClientHome.html");
+        if(n.value == '' || p.value == '' || id.value == '' || pn.value == '' || c.value == ''){
+            resp.textContent="please fill in all the requested data";
+        }
+        else {
+            window.location.replace("ClientHome.html");
+        }
     })
 </script>
 </html>
