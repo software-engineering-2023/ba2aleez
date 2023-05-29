@@ -13,16 +13,16 @@
              color: white;
              font-size: xx-large;
         }
-        body{
-            background-color: aliceblue;
-        }
+        body {
+        background-color: #0a0000be; /*change to preferred color code*/
+      }
         h2{
             margin-left: auto; 
             margin-right: 0;
             float: right;
             font-family: 'Times New Roman', Times, serif;
         }
-        #reg,#login{
+        #login{
           background-color: #79b088; 
             border: 1px solid black; 
             color: white; /* White text */
@@ -31,20 +31,44 @@
             font-size: larger;
             font-family: 'Times New Roman', Times,  serif;
         }
+        button#login:hover{
+          background-color: #86c697;
+        }
+        textarea {
+            resize: none;
+            border: 1px solid #043c3c;
+            background-color: #ffffff;
+        }
+        #n,#password,#name,#pass,#login {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+          color: whitesmoke;
+        }
+        #n,#password{
+            color: whitesmoke;
+        }
     </style>
 </head>
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
     </div>
-    <h2 align="left">
-        Quick, Convenient and secure. Internet banking lets you access your accounts whenever you want-so 
-        its easy to manage your money, wherever you are in the world
-    </h2>
-    <label ID="n">username:</label><br>
-    <textarea ID="name" runat="server"></textarea> <br/>
-    <label ID="password">password:</label><br>
-    <textarea ID="pass" runat="server"></textarea> <br/>
+    <label ID="n">username:</label><br> <br>
+    <textarea ID="name" runat="server"></textarea> <br/> <br> <br>
+    <label ID="password">password:</label><br> <br>
+    <textarea ID="pass" runat="server"></textarea> <br/> <br> <br>
     <button ID = "login">login</button><br>
     <label ID="response"></label>
 </body>

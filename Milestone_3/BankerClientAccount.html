@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: aliceblue;
-        }
+        body {
+        background-color: #0a0000be; /*change to preferred color code*/
+      }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 40px;
             float: right;
         }
         .topnav {
@@ -39,9 +39,15 @@
             font-size: larger;
             font-family: 'Times New Roman', Times,  serif;
         }
-        #reponse {
-            margin-bottom: 10;
-            margin-left: 0;
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+          color: white;
         }
         table,th,td{
           border:1px solid black;
@@ -57,21 +63,36 @@
             width: 700px;
         }
         th,td{
-            border: 1px solid black;
+            border: 1px solid white;
         }
-        img {
-      position: relative;
-      top: -200px;
-      left: 500px;
-      width: 600px;
-      }
-      
+        textarea {
+            resize: none;
+            border: 1px solid #043c3c;
+            background-color: #ffffff;
+        }
+        table{
+          margin-left: 30px;
+          margin-right: auto;
+          border: 1px solid white;
+          border-collapse: collapse;
+          border-color: white;
+          min-width: max-content;
+          width: 50%;
+          color: whitesmoke;
+        }
+        #Abtn,#amount,#Rbtn {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
-      </div>
+      </div> <br/>
       <table>
         <tr>
           <th>Account number</th>
@@ -94,7 +115,7 @@
             <td>9087634556</td>
             <td>Ramadan Sobhi</td>
             
-            <
+            
           </tr>
           <tr>
             <td>6489358679</td>
@@ -118,13 +139,12 @@
             
             
           </tr>
-      </table>
-      <textarea ID="amount" runat="server"></textarea> <br/>
+      </table> <br/>
+      <textarea ID="amount" runat="server"></textarea> <br/> <br> <br>
     <button ID="Abtn">Block</button>
     <button ID="Rbtn">Unblock</button>
     <button ID="home">Home</button><br>
     <label ID="response"></label>
-    <img src="C:\Users\Wassif\Desktop\download.png" alt="Image Description">
 
 </body>
 <script>
