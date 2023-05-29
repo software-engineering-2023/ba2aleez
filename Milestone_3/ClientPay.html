@@ -11,7 +11,7 @@
         }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         #home,#Pbtn{
@@ -64,6 +64,27 @@
         th,td{
             border: 1px solid black;
         }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
+        }
+        #bill,#credit,#utility,#accounts,#cards,#type,#amount,#Pbtn,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        #bill,#credit,#utility {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +92,11 @@
         <h1 align="center"> GUC BANK</h1>
       </div>
     <input type="radio" id="bill" name="type" value="bill">
-    <label for="bill">bill</label><br>
+    <label for="bill"> bill</label><br>
     <input type="radio" id="credit" name="type" value="credit">
-    <label for="credit">credit</label><br>
+    <label for="credit"> credit</label><br>
     <input type="radio" id="utility" name="type" value="utility" >
-    <label for="utility">utility</label><br>
+    <label for="utility"> utility</label><br>
     <select name="accounts" id="accounts" >
         <option value="acc 1">acc 1</option>
         <option value="acc 2">acc 2</option>
@@ -91,10 +112,10 @@
         <option value="elec">electricity</option>
         <option value="water">water</option>
         <option value="tele"> telephone</option>
-    </select><br>
-    <textarea ID="amount" runat="server"></textarea> <br/>
+    </select><br> <br>
+    <textarea ID="amount" runat="server"></textarea> <br> <br> <br>
     <button ID="Pbtn">pay</button>
-    <button ID="home">Home</button><br>
+    <button ID="home">Home</button><br><br><br>
     <label ID="response"></label>
     <table id="noti">
         <tr>
@@ -113,6 +134,7 @@
             <td>the technical issue regarding the incorrect points balance is resolved</td>
             </tr>
       </table>
+      <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("home");

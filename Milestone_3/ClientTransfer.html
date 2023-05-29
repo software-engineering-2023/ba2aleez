@@ -11,7 +11,7 @@
         }
         #home {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
         }
         .topnav {
@@ -27,24 +27,30 @@
         }
         #acc {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
         }
         #bankn {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
             position: static;
             visibility: hidden;
             display: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
         }
         #iban {
             margin-left: auto; 
-            margin-right: 0;
+            margin-right: 30px;
             float: right;
             position: static;
             visibility: hidden;
             display: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
         }
         #accounts {
             position: static;
@@ -74,6 +80,23 @@
         th,td{
           border:1px solid black;
         }
+        textarea {
+            resize: none;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 500px;
+            top: 160px;
+            opacity: 0.85;
+        }
+        #same,#domestic,#inter,#amount,#Tbtn,#response {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
@@ -86,15 +109,15 @@
       <input type="radio" id="domestic" name="type" value="domestic">
       <label for="domestic">domestic transfer</label><br>
       <input type="radio" id="inter" name="type" value="inter">
-      <label for="inter">international transfer</label>
+      <label for="inter">international transfer</label> <br>
       <textarea ID="bankn" runat="server">Bank name</textarea> <br>
-    <textarea ID="amount" runat="server">transfer amount</textarea><br>
+    <textarea ID="amount" runat="server">transfer amount</textarea><br> <br>
     <textarea ID="iban" runat="server">IBAN code</textarea> 
     <select name="accounts" id="accounts" >
         <option value="acc 1">acc 1</option>
         <option value="acc 2">acc 2</option>
     </select><br>
-    <button ID="Tbtn">Transfer</button><br>
+    <button ID="Tbtn">Transfer</button><br> <br>
     <button ID="home">Home</button><br>
     <label ID="response"></label>
     <table id="noti">
@@ -114,6 +137,7 @@
             <td>the technical issue regarding the incorrect points balance is resolved</td>
             </tr>
       </table>
+      <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("home");
