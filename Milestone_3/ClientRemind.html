@@ -116,7 +116,7 @@
           <td>loan installment reminder</td>
           <td>29/8/2023</td>
         </tr>
-      </table> <br> <br> <br> <br> <br>
+      </table> <br> <br> <br> <br> <br> <br> <br> <br>
     <input type="datetime-local" id="date"> <br> <br> 
     <textarea ID="optional" runat="server">write reminder description *optional*</textarea> <br/> <br> <br>
     <button ID="Rbtn">set reminder</button>
@@ -147,6 +147,7 @@
     const resp = document.getElementById("response");
     const d = document.getElementById("date");
     const op = document.getElementById("optional");
+    const rm = document.getElementById("current reminders");
     hbtn.addEventListener("click",function(e){
     window.location.replace("ClientHome.html");
     })
@@ -155,7 +156,17 @@
         resp.textContent="please enter a date";
     }
     else {
+      if(rm.rows.length <= 5){
         resp.textContent="Reminder created successfully";
+        var row = rm.insertRow(2);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = op.value;
+        cell2.innerHTML = d.value;
+      }
+      else {
+        resp.textContent="maximum number of reminders reached";
+      }
     }
     })
     op.addEventListener("click",function(e){
