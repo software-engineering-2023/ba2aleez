@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        #home {
+            margin-left: auto; 
+            margin-right: 0;
+            float: right;
+        }
+        .topnav {
+             background-color: #043c3c;
+             overflow: hidden;
+             font-family: 'Times New Roman', Times,  serif;
+             color: white;
+             font-size: xx-large;
+        }
+        #home,#Abtn{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
+        #Rbtn{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
+        #reponse {
+            margin-bottom: 10;
+            margin-left: 0;
+        }
+        table,th,td{
+          border:1px solid black;
+
+        }
+        #noti {
+            position: absolute;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+        th,td{
+            border: 1px solid black;
+        }
+        img {
+      position: relative;
+      top: -420px;
+      left: 40px;
+      }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 align="center"> GUC BANK</h1>
+      </div>
+      <table>
+        <tr>
+          <th>Account number</th>
+          <th>Client Name</th>
+          <th>Loan</th>
+          <th>Loan Number</th>
+          <th>Date of request</th>
+          <th>Monthly installments</th>
+          <th>interest rate</th>
+        </tr>
+        <tr>
+          <td>2463576256</td>
+          <td>Mohamed Salah</td>
+          <td>150,000</td>
+          <td>2374839</td>
+          <td>29/12/2023</td>
+          <td>5,000</td>
+          <td>17%</td>
+        </tr>
+        <tr>
+          <td>7987664786</td>
+          <td>Abdo el Balf</td>
+          <td>2,000,000</td>
+          <td>4523583</td>
+          <td>12/7/2023</td>
+          <td>60,000</td>
+          <td>21%</td>
+        </tr>
+        <tr>
+            <td>9087634556</td>
+            <td>Ramadan Sobhi</td>
+            <td>950,000</td>
+            <td>6574839</td>
+            <td>29/3/2023</td>
+            <td>11,000</td>
+            <td>15%</td>
+          </tr>
+          <tr>
+            <td>6489358679</td>
+            <td>Lionel Messi</td>
+            <td>300,000</td>
+            <td>7444839</td>
+            <td>09/12/2023</td>
+            <td>10,000</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>3476654355</td>
+            <td>Cristiano Ronaldo</td>
+            <td>750,000</td>
+            <td>7445839</td>
+            <td>19/06/2023</td>
+            <td>20,000</td>
+            <td>5%</td>
+          </tr><tr>
+            <td>7398309484</td>
+            <td>Bruno Fernandes</td>
+            <td>500,000</td>
+            <td>4564839</td>
+            <td>30/08/2023</td>
+            <td>15,000</td>
+            <td>12%</td>
+          </tr><tr>
+            <td>1238758494</td>
+            <td>Erling Haaland</td>
+            <td>1,760,000</td>
+            <td>9064839</td>
+            <td>23/02/2023</td>
+            <td>50,000</td>
+            <td>20%</td>
+          </tr>
+      </table>
+      <textarea ID="amount" runat="server"></textarea> <br/>
+    <button ID="Abtn">Accept loan</button>
+    <button ID="Rbtn">Reject loan</button>
+    <button ID="home">Home</button><br>
+    <label ID="response"></label>
+    <img src="C:\Users\Wassif\Desktop\download.png" alt="Image Description">
+
+</body>
+<script>
+    const hbtn = document.getElementById("home");
+    const Abtn = document.getElementById("Abtn");
+    const Rbtn = document.getElementById("Rbtn");
+    const amount = document.getElementById("amount");
+    const resp = document.getElementById("response");
+    const car = document.getElementById("car");
+    const per = document.getElementById("personal");
+    hbtn.addEventListener("click",function(e){
+    window.location.replace("BankerHome.html");
+    })
+    Abtn.addEventListener("click",function(e){
+    if(amount.value == ''){
+        resp.textContent="please enter account number";
+    }
+    else {
+        resp.textContent="Loan accepted";
+    }
+    })
+    Rbtn.addEventListener("click",function(e){
+    if(amount.value == ''){
+        resp.textContent="please enter account number";
+    }
+    else {
+        resp.textContent="Loan rejected";
+    }
+    })
+</script>
+</html>
