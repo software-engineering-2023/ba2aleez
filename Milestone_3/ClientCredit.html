@@ -70,7 +70,7 @@
             top: 160px;
             opacity: 0.85;
         }
-        #date,#credit,#accounts,#cards,#Abtn {
+        #date,#credit,#accounts,#cards,#Abtn,#balance {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
@@ -97,8 +97,8 @@
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
-      </div>
-      <table>
+      </div> <br/>
+      <table id="trans">
         <tr>
           <th>amount</th>
           <th>type</th>
@@ -122,6 +122,7 @@
         <option value="card 3">card number: 3141 4962 5358 9795</option>
         <option value="whatever">card number: 3141 4962 5358 9796</option>
     </select> <br> <br>
+    <label ID="balance"> balance = 50,000</label><br> <br>
     <button ID="Abtn">apply for a credit card</button><br>
     <button ID="home">Home</button><br> <br>
     <label ID="response"></label>
@@ -148,11 +149,40 @@
     const hbtn = document.getElementById("home");
     const apply = document.getElementById("Abtn");
     const resp = document.getElementById("response");
+    const acc = document.getElementById("cards");
+    const tr = document.getElementById("trans");
+    const bal = document.getElementById("balance");
     hbtn.addEventListener("click",function(e){
     window.location.replace("ClientHome.html");
     })
     apply.addEventListener("click",function(e){
         resp.textContent="credit card application sent";
+    })
+    acc.addEventListener("click",function(e){
+      if(acc.value == "card 1"){
+        tr.rows[2].cells[0].innerHTML = '3,000';
+        tr.rows[2].cells[1].innerHTML = 'utility payment';
+        tr.rows[2].cells[2].innerHTML = '3/3/2023';
+        bal.textContent="balance = 36,000"
+      }
+      else if(acc.value == "card 2") {
+        tr.rows[2].cells[0].innerHTML = '6,000';
+        tr.rows[2].cells[1].innerHTML = 'domestic transfer';
+        tr.rows[2].cells[2].innerHTML = '1/5/2023';
+        bal.textContent="balance = 20,000"
+      }
+      else if(acc.value == "card 3") {
+        tr.rows[2].cells[0].innerHTML = '8,000';
+        tr.rows[2].cells[1].innerHTML = 'domestic transfer';
+        tr.rows[2].cells[2].innerHTML = '1/5/2023';
+        bal.textContent="balance = 5,000"
+      }
+      else {
+        tr.rows[2].cells[0].innerHTML = '7,000';
+        tr.rows[2].cells[1].innerHTML = 'domestic transfer';
+        tr.rows[2].cells[2].innerHTML = '1/5/2023';
+        bal.textContent="balance = -1,000"
+      }
     })
 </script>
 </html>
