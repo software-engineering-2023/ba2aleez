@@ -25,23 +25,55 @@
         body{
             background-color: aliceblue;
         }
+        textarea {
+            resize: none;
+            border: 1px solid #043c3c;
+            color: #ffffff;
+        }
+        #logo{
+            position: absolute;
+            z-index: -1;
+            left: 700px;
+            top: 210px;
+            opacity: 0.85;
+        }
+        #n,#password,#name,#p,#id,#NID,#pn,#pnumber,#c,#card,#reg {
+            margin-left: 30px; 
+            margin-right: auto;
+            float: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
+        button#reg:hover{
+          background-color: #86c697;
+        }
     </style>
 </head>
 <body>
     <div class="topnav">
         <h1 align="center"> GUC BANK</h1>
     </div>
-    <label ID="n">username: </label>
-    <textarea ID="name" runat="server"></textarea> <br/>
-    <label ID="p">password: </label>
-    <textarea ID="password" runat="server"></textarea> <br/>
-    <label ID="id">National ID: </label>
-    <textarea ID="NID" runat="server"></textarea> <br/>
-    <label ID="pn">phone number: </label>
-    <textarea ID="pnumber" runat="server"></textarea> <br/>
-    <label ID="c">credit card number: </label>
-    <textarea ID="card" runat="server"></textarea> <br/>
+    <label ID="n">username: </label> <br> <br> 
+    <textarea ID="name" runat="server"></textarea> <br/> <br> <br>
+    <label ID="p">password: </label> <br> <br>
+    <textarea ID="password" runat="server"></textarea> <br/> <br> <br>
+    <label ID="id">National ID: </label> <br> <br>
+    <textarea ID="NID" runat="server"></textarea> <br/> <br> <br>
+    <label ID="pn">phone number: </label> <br> <br>
+    <textarea ID="pnumber" runat="server"></textarea> <br/> <br> <br>
+    <label ID="c">credit card number: </label> <br> <br>
+    <textarea ID="card" runat="server"></textarea> <br/> <br> <br>
     <button ID="reg">register</button><br>
+    <img src="guc logo.png" id="logo">
 </body>
 <script>
     const hbtn = document.getElementById("reg");
