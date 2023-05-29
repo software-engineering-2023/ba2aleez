@@ -43,6 +43,7 @@
             float: left;
             font-size: large;
             font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
         }
         #cards{
             font-size: larger;
@@ -59,6 +60,8 @@
         }
         textarea {
             resize: none;
+            border: 1px solid #043c3c;
+            color: #ffffff;
         }
         #logo{
             position: absolute;
@@ -67,12 +70,27 @@
             top: 160px;
             opacity: 0.85;
         }
-        #date,#credit,#accounts,#cards,#Abtn,#response {
+        #date,#credit,#accounts,#cards,#Abtn {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
+        button#Abtn:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
         }
     </style>
 </head>
@@ -99,10 +117,10 @@
       </table> <br> <br> <br> <br> <br>
       <input type="datetime-local" id="date"> filter transactions by date <br> <br>
       <select name="cards" id="cards" >
-        <option value="card 1">card 1</option>
-        <option value="card 2">card 2</option>
-        <option value="card 3">card 3</option>
-        <option value="whatever"> change those to actual card numbers or options idk</option>
+        <option value="card 1">card number: 3141 4962 5358 9793</option>
+        <option value="card 2">card number: 3141 4962 5358 9794</option>
+        <option value="card 3">card number: 3141 4962 5358 9795</option>
+        <option value="whatever">card number: 3141 4962 5358 9796</option>
     </select> <br> <br>
     <button ID="Abtn">apply for a credit card</button><br>
     <button ID="home">Home</button><br> <br>

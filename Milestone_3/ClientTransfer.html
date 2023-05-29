@@ -76,12 +76,15 @@
             border: 1px solid black;
             font-size: x-large;
             width: 700px;
+            border-collapse: collapse;
         }
         th,td{
           border:1px solid black;
         }
         textarea {
             resize: none;
+            border: 1px solid #043c3c;
+            background-color: #ffffff;
         }
         #logo{
             position: absolute;
@@ -90,12 +93,27 @@
             top: 160px;
             opacity: 0.85;
         }
-        #same,#domestic,#inter,#amount,#Tbtn,#response {
+        #same,#domestic,#inter,#amount,#Tbtn {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
+        button#Tbtn:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
         }
     </style>
 </head>
@@ -114,8 +132,8 @@
     <textarea ID="amount" runat="server">transfer amount</textarea><br> <br>
     <textarea ID="iban" runat="server">IBAN code</textarea> 
     <select name="accounts" id="accounts" >
-        <option value="acc 1">acc 1</option>
-        <option value="acc 2">acc 2</option>
+        <option value="acc 1">account number: 0112345678</option>
+        <option value="acc 2">account number: 0112345679</option>
     </select><br>
     <button ID="Tbtn">Transfer</button><br> <br>
     <button ID="home">Home</button><br>

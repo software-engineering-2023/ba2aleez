@@ -42,6 +42,7 @@
             float: left;
             font-size: large;
             font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
         }
         table,th,td{
           border:1px solid black;
@@ -67,6 +68,8 @@
         }
         textarea {
             resize: none;
+            border: 1px solid #043c3c;
+          color: #ffffff;
         }
         #logo{
             position: absolute;
@@ -75,12 +78,30 @@
             top: 160px;
             opacity: 0.85;
         }
-        #accounts,#operator,#amount,#date,#ap,#cl,#response {
+        #accounts,#operator,#amount,#date,#ap,#cl {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
+        button#ap:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
+        }
+        button#cl:hover{
+          background-color: #86c697;
         }
     </style>
 </head>
@@ -106,8 +127,8 @@
         </tr>
       </table> <br> <br> <br> <br> <br>
     <select name="accounts" id="accounts" >
-        <option value="acc 1">acc 1</option>
-        <option value="acc 2">acc 2</option>
+      <option value="acc 1">account number: 0112345678</option>
+      <option value="acc 2">account number: 0112345679</option>
     </select> 
     <label ID="balance"> balance = 50,000</label><br> <br>
     <select name="operator" id="operator" >

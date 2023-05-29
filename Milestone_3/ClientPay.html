@@ -60,12 +60,15 @@
             border: 1px solid black;
             font-size: x-large;
             width: 700px;
+            border-collapse: collapse;
         }
         th,td{
             border: 1px solid black;
         }
         textarea {
             resize: none;
+            border: 1px solid #043c3c;
+            color: #ffffff;
         }
         #logo{
             position: absolute;
@@ -74,16 +77,31 @@
             top: 160px;
             opacity: 0.85;
         }
-        #bill,#credit,#utility,#accounts,#cards,#type,#amount,#Pbtn,#response {
+        #bill,#credit,#utility,#accounts,#cards,#type,#amount,#Pbtn {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
         }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
         #bill,#credit,#utility {
             font-family: 'Times New Roman', Times, serif;
             font-size: x-large;
+        }
+        button#Pbtn:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
         }
     </style>
 </head>
@@ -98,14 +116,14 @@
     <input type="radio" id="utility" name="type" value="utility" >
     <label for="utility"> utility</label><br>
     <select name="accounts" id="accounts" >
-        <option value="acc 1">acc 1</option>
-        <option value="acc 2">acc 2</option>
+        <option value="acc 1">account number: 0112345678</option>
+        <option value="acc 2">account number: 0112345679</option>
     </select>
     <select name="cards" id="cards" >
-        <option value="card 1">card 1</option>
-        <option value="card 2">card 2</option>
-        <option value="card 3">card 3</option>
-        <option value="whatever"> change those to actual card numbers or options idk</option>
+        <option value="card 1">card number: 3141 4962 5358 9793</option>
+        <option value="card 2">card number: 3141 4962 5358 9794</option>
+        <option value="card 3">card number: 3141 4962 5358 9795</option>
+        <option value="whatever">card number: 3141 4962 5358 9796</option>
     </select>
     <select name="type" id="type" >
         <option value="gas">gas</option>

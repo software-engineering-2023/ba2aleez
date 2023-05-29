@@ -44,6 +44,7 @@
             float: left;
             font-size: large;
             font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
         }
         table,th,td{
           border:1px solid black;
@@ -74,6 +75,31 @@
             top: 160px;
             opacity: 0.85;
         }
+        #response {
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          left: 30px;
+          position: absolute;
+        }
+        #rate,#amount,#Rbtn{
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+        }
+        textarea{
+          border: 1px solid #043c3c;
+          color: #ffffff;
+        }
+        button#Rbtn:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +127,7 @@
       <label ID="rate"> 100 points can be redeemed for 105 pounds</label> <br>
       <label ID="dummy2" > 3,000 points from transfers</label><br>
       <label ID="dummy3" > balance: 5,000 points</label>
-      <textarea ID="amount" runat="server"></textarea> <br/>
+      <textarea ID="amount" runat="server"></textarea> <br/> <br> <br>
       <button ID="Rbtn">Redeem</button>
     <button ID="home">Home</button><br>
     <label ID="response"></label>

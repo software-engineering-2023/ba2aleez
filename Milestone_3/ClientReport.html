@@ -30,6 +30,7 @@
             float: left;
             font-size: large;
             font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
         }
         table,th,td{
           border:1px solid black;
@@ -62,9 +63,12 @@
             border: 1px solid black;
             font-size: x-large;
             width: 700px;
+            border-collapse: collapse;
         }
         textarea {
             resize: none;
+            border: 1px solid #043c3c;
+          color: #ffffff;
         }
         #logo{
             position: absolute;
@@ -73,12 +77,37 @@
             top: 160px;
             opacity: 0.85;
         }
-        #theft,#technical,#card,#desc,#Rbtn,#ap,#apply,#response {
+        #theft,#technical,#card,#desc,#Rbtn,#ap,#apply {
             margin-left: 30px; 
             margin-right: auto;
             float: left;
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
+        }
+        #de{
+          margin-left: 29px;
+          margin-right: auto;
+          float: left;
+          font-size: large;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        #response {
+          margin-left: 30px;
+          margin-right: auto;
+          float: left;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: large;
+          bottom: 120px;
+          position: absolute;
+        }
+        button#Rbtn:hover{
+          background-color: #86c697;
+        }
+        button#home:hover{
+          background-color: #86c697;
+        }
+        button#apply:hover{
+          background-color: #86c697;
         }
     </style>
 </head>
@@ -107,12 +136,18 @@
     <label for="theft">credit card theft</label><br>
     <input type="radio" id="technical" name="type" value="technical">
     <label for="technical">technical issue</label><br>
-    <textarea ID="card" runat="server">please enter the credit card number</textarea><br/> <br> <br>
-    <textarea ID="desc" runat="server"></textarea> write a description of the report <br/> <br> <br> <br>
+    <select name="cards" id="card" >
+      <option value="card 1">card number: 3141 4962 5358 9793</option>
+      <option value="card 2">card number: 3141 4962 5358 9794</option>
+      <option value="card 3">card number: 3141 4962 5358 9795</option>
+      <option value="whatever">card number: 3141 4962 5358 9796</option>
+  </select><br/> <br>
+  <label for="desc" id="de"> write a description of the issue</label>
+    <textarea ID="desc" runat="server"></textarea> <br/> <br> <br> <br>
     <button ID="Rbtn">report</button>
-    <button ID="home">Home</button><br>
-    <label ID="ap">would you like to apply for a replacement?</label>
-    <button ID="apply">apply</button><br> <br>
+    <button ID="home">Home</button><br> <br> <br>
+    <label ID="ap">would you like to apply for a replacement?</label> <br> <br>
+    <button ID="apply">apply</button><br> <br> <br>
     <label ID="response"></label>
     <table id="noti">
       <tr>
@@ -174,8 +209,6 @@
     applyb.addEventListener("click",function(e){
       resp.textContent="application has been sent";
     })
-    card.addEventListener("click",function(e){
-        card.textContent="";
-    })
+    
 </script>
 </html>
