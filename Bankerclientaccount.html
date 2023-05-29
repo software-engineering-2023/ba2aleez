@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        #home {
+            margin-left: auto; 
+            margin-right: 0;
+            float: right;
+        }
+        .topnav {
+             background-color: #043c3c;
+             overflow: hidden;
+             font-family: 'Times New Roman', Times,  serif;
+             color: white;
+             font-size: xx-large;
+        }
+        #home,#Abtn{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
+        #Rbtn{
+          background-color: #79b088; 
+            border: 1px solid black; 
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            font-size: larger;
+            font-family: 'Times New Roman', Times,  serif;
+        }
+        #reponse {
+            margin-bottom: 10;
+            margin-left: 0;
+        }
+        table,th,td{
+          border:1px solid black;
+
+        }
+        #noti {
+            position: absolute;
+            bottom: 0;
+            left: 400px;
+            right: 400px;
+            border: 1px solid black;
+            font-size: x-large;
+            width: 700px;
+        }
+        th,td{
+            border: 1px solid black;
+        }
+        img {
+      position: relative;
+      top: -200px;
+      left: 500px;
+      width: 600px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <h1 align="center"> GUC BANK</h1>
+      </div>
+      <table>
+        <tr>
+          <th>Account number</th>
+          <th>Client Name</th>
+          
+          
+        </tr>
+        <tr>
+          <td>2463576256</td>
+          <td>Mohamed Salah</td>
+          
+          
+        <tr>
+          <td>7987664786</td>
+          <td>Abdo el Balf</td>
+         
+          
+        </tr>
+        <tr>
+            <td>9087634556</td>
+            <td>Ramadan Sobhi</td>
+            
+            <
+          </tr>
+          <tr>
+            <td>6489358679</td>
+            <td>Lionel Messi</td>
+            
+            
+          </tr>
+          <tr>
+            <td>3476654355</td>
+            <td>Cristiano Ronaldo</td>
+           
+            
+          </tr><tr>
+            <td>7398309484</td>
+            <td>Bruno Fernandes</td>
+            
+            
+          </tr><tr>
+            <td>1238758494</td>
+            <td>Erling Haaland</td>
+            
+            
+          </tr>
+      </table>
+      <textarea ID="amount" runat="server"></textarea> <br/>
+    <button ID="Abtn">Block</button>
+    <button ID="Rbtn">Unblock</button>
+    <button ID="home">Home</button><br>
+    <label ID="response"></label>
+    <img src="C:\Users\Wassif\Desktop\download.png" alt="Image Description">
+
+</body>
+<script>
+    const hbtn = document.getElementById("home");
+    const Abtn = document.getElementById("Abtn");
+    const Rbtn = document.getElementById("Rbtn");
+    const amount = document.getElementById("amount");
+    const resp = document.getElementById("response");
+    const car = document.getElementById("car");
+    const per = document.getElementById("personal");
+    hbtn.addEventListener("click",function(e){
+    window.location.replace("BankerHome.html");
+    })
+    Abtn.addEventListener("click",function(e){
+    if(amount.value == ''){
+        resp.textContent="please enter account number";
+    }
+    else {
+        resp.textContent=" account blocked";
+    }
+    })
+    Rbtn.addEventListener("click",function(e){
+    if(amount.value == ''){
+        resp.textContent="please enter account number";
+    }
+    else {
+        resp.textContent="account unblocked";
+    }
+    })
+</script>
+</html>
